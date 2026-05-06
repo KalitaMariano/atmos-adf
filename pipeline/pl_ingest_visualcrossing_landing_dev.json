@@ -93,7 +93,7 @@
 					"url": "https://kv-atmos-dev-westus2-01.vault.azure.net//secrets/visualcrossing-api-key-dev/417dbdf5ca3d4105b5466667a22cbc4e?api-version=2025-07-01",
 					"authentication": {
 						"type": "MSI",
-						"resource": "https://vault.azure.net/.default"
+						"resource": "https://vault.azure.net/"
 					}
 				}
 			}
