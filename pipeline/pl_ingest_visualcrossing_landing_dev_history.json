@@ -137,6 +137,11 @@
 				],
 				"userProperties": [],
 				"typeProperties": {
+					"items": {
+						"value": "@variables('date_list')",
+						"type": "Expression"
+					},
+					"batchCount": 10,
 					"activities": [
 						{
 							"name": "Copy_visuaalrosssing_to_landing_copy1",
@@ -182,7 +187,7 @@
 											"type": "Expression"
 										},
 										"date": {
-											"value": "@variables('date')",
+											"value": "@formatDateTime(addDays(pipeline().parameters.startData,item()),'yyyy-MM-dd')",
 											"type": "Expression"
 										},
 										"apikey": {
@@ -202,7 +207,7 @@
 											"type": "Expression"
 										},
 										"date": {
-											"value": "@variables('date')",
+											"value": "@formatDateTime(addDays(pipeline().parameters.startData,item()),'yyyy-MM-dd')",
 											"type": "Expression"
 										},
 										"file_name": {
